@@ -3,89 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tetris Game</title>
+    <title>Random Jokes App</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="game-container">
-        <div class="game-header">
-            <h1>TETRIS</h1>
-            <div class="score-board">
-                <div class="score-item">
-                    <span class="label">Score</span>
-                    <span class="value" id="score">0</span>
-                </div>
-                <div class="score-item">
-                    <span class="label">Lines</span>
-                    <span class="value" id="lines">0</span>
-                </div>
-                <div class="score-item">
-                    <span class="label">Level</span>
-                    <span class="value" id="level">1</span>
-                </div>
-            </div>
+    <div class="container">
+        <h1>Random Jokes Generator</h1>
+        <div class="joke-container">
+            <p id="joke-text">Click the button to get a joke!</p>
+            <p id="joke-delivery" class="hidden"></p>
         </div>
-        
-        <div class="game-main">
-            <div class="game-board-container">
-                <canvas id="gameBoard" width="300" height="600"></canvas>
-                <div class="game-overlay" id="gameOverlay">
-                    <div class="overlay-content">
-                        <h2 id="overlayTitle">Game Over</h2>
-                        <p id="overlayMessage">Press R to restart</p>
-                        <button id="restartBtn" class="restart-btn">Restart Game</button>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="game-info">
-                <div class="next-piece">
-                    <h3>Next</h3>
-                    <canvas id="nextPiece" width="120" height="120"></canvas>
-                </div>
-                
-                <div class="controls">
-                    <h3>Controls</h3>
-                    <div class="control-item">
-                        <span class="key">←→</span>
-                        <span class="action">Move</span>
-                    </div>
-                    <div class="control-item">
-                        <span class="key">↓</span>
-                        <span class="action">Soft Drop</span>
-                    </div>
-                    <div class="control-item">
-                        <span class="key">↑</span>
-                        <span class="action">Rotate</span>
-                    </div>
-                    <div class="control-item">
-                        <span class="key">Space</span>
-                        <span class="action">Hard Drop</span>
-                    </div>
-                    <div class="control-item">
-                        <span class="key">P</span>
-                        <span class="action">Pause</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="mobile-controls">
-            <div class="mobile-row">
-                <button class="mobile-btn" id="rotateBtn">↻</button>
-                <button class="mobile-btn" id="leftBtn">←</button>
-                <button class="mobile-btn" id="downBtn">↓</button>
-                <button class="mobile-btn" id="rightBtn">→</button>
-            </div>
-            <div class="mobile-row">
-                <button class="mobile-btn wide" id="dropBtn">Drop</button>
-                <button class="mobile-btn wide" id="pauseBtn">Pause</button>
+        <div class="buttons">
+            <button id="get-joke" class="btn">Get New Joke</button>
+            <div class="category-buttons">
+                <button class="btn category-btn" data-category="Programming">Programming</button>
+                <button class="btn category-btn" data-category="General">General</button>
+                <button class="btn category-btn" data-category="Pun">Pun</button>
             </div>
         </div>
     </div>
-    
-    <div id="confetti-container"></div>
-    
     <script src="script.js"></script>
 </body>
 </html>
